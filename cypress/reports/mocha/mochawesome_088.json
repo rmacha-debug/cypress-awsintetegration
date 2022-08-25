@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T08:44:07.856Z",
+    "end": "2022-07-10T08:44:09.798Z",
+    "duration": 1942,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f13943a-d396-44a9-974f-55cb12995a3b",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem copy.js",
+      "file": "cypress/integration/awstests/getitem copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ecf923c9-4a9b-4914-9fc5-ea98ea084e20",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 1772,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "Cypress.on('uncaught:exception', (err, runnable) => {\n  return false;\n})(async () => {\n  expect(\"raju\").is.equals(\"raju\");\n  var jsondata = await myModule.scanForResultsDdbDc();\n  const obj = JSON.parse(jsondata);\n  expect(0).is.equals(0);\n  cy.log(obj.Items[0].Artist);\n  expect(0).is.equals(0);\n  cy.get(obj.Items[0].Artist);\n})();",
+              "err": {
+                "message": "TypeError: Cypress.on(...) is not a function",
+                "estack": "TypeError: Cypress.on(...) is not a function\n    at Context.eval (http://localhost:53294/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:109:7)",
+                "diff": null
+              },
+              "uuid": "df1b1fca-4b52-4279-9f76-b8c9b305c55a",
+              "parentUUID": "ecf923c9-4a9b-4914-9fc5-ea98ea084e20",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "df1b1fca-4b52-4279-9f76-b8c9b305c55a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1772,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

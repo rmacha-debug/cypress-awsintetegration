@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T09:53:43.431Z",
+    "end": "2022-07-10T09:53:44.703Z",
+    "duration": 1272,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0fb0c0ee-2f4c-4a64-8f78-1bebede32203",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem.js",
+      "file": "cypress/integration/awstests/getitem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5ed1a671-c4cd-4702-a474-a96ff066f3fa",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 1133,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('scanForResultsDdbDc').then(jsondata => {\n  var obj = JSON.parse(jsondata);\n  expect(0).is.equals(0);\n  expect(0).is.equals(0);\n  cy.log(obj);\n  expect(\"Acme Band\").is.equals(obj.Items[0].Artist);\n  expect(\"Arturus Ardvarkian\").is.equals(obj.Items[1].Artist);\n  expect(\"http://demo.automationtesting.in/Register.html\").is.equals(obj.Items[2].Artist);\n  url = obj.Items[2].Artist;\n  obj.forEach(testdata => {\n    cy.log(testdata.Items.Artist);\n  });\n});",
+              "err": {
+                "message": "TypeError: obj.forEach is not a function",
+                "estack": "TypeError: obj.forEach is not a function\n    at Context.eval (http://localhost:61356/__cypress/tests?p=cypress\\integration\\awstests\\getitem.js:111:11)",
+                "diff": null
+              },
+              "uuid": "66b6c83b-235e-4917-8986-bfcee21983cb",
+              "parentUUID": "5ed1a671-c4cd-4702-a474-a96ff066f3fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "66b6c83b-235e-4917-8986-bfcee21983cb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1133,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

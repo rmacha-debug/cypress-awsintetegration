@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T10:26:28.550Z",
+    "end": "2022-07-10T10:26:29.947Z",
+    "duration": 1397,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "de4ac7a2-adf9-4d29-863b-f9863cfa69c3",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem.js",
+      "file": "cypress/integration/awstests/getitem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a04b0361-5f72-496e-97ee-19493950e033",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 1215,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('scanForResultsDdbDc').then(jsondata => {\n  var obj = JSON.parse(jsondata);\n  expect(0).is.equals(0);\n  expect(0).is.equals(0);\n  cy.log(obj);\n  expect(\"Acme Band\").is.equals(obj.Items[0].Artist);\n  expect(\"Arturus Ardvarkian\").is.equals(obj.Items[1].Artist);\n  expect(\"http://demo.automationtesting.in/Register.html\").is.equals(obj.Items[2].Artist);\n  for (var i = 0; i < obj.Count; i++) {\n    url = obj.Items[i].Artist;\n    cy.log(url);\n    cy.wait(6000);\n  }\n});",
+              "err": {
+                "message": "AssertionError: expected 'Acme Band' to equal 'Band'",
+                "estack": "AssertionError: expected 'Acme Band' to equal 'Band'\n    at Context.eval (http://localhost:59030/__cypress/tests?p=cypress\\integration\\awstests\\getitem.js:102:36)",
+                "diff": "- 'Acme Band'\n+ 'Band'\n"
+              },
+              "uuid": "976a08bc-961a-448f-ba4a-3b607a9d472d",
+              "parentUUID": "a04b0361-5f72-496e-97ee-19493950e033",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "976a08bc-961a-448f-ba4a-3b607a9d472d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

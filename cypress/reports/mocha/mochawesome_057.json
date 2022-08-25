@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T07:56:38.114Z",
+    "end": "2022-07-10T07:56:38.602Z",
+    "duration": 488,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15d3e231-a6f0-407b-8fe2-f254863332ac",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem copy.js",
+      "file": "cypress/integration/awstests/getitem copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 372,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > AWS.FileSystemCredentials is not a constructor\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > AWS.FileSystemCredentials is not a constructor\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Config.loadFromPath (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:12810:27)\n    at ./cypress/integration/smoketests/ddbdoc_scan.js (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:5632:12)\n    at __webpack_require__ (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:20:30)\n    at ./cypress/integration/awstests/getitem copy.js (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:5604:40)\n    at __webpack_require__ (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:20:30)\n    at 0 (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:30766:18)\n    at __webpack_require__ (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:20:30)\n    at eval (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:84:18)\n    at eval (http://localhost:52082/__cypress/tests?p=cypress\\integration\\awstests\\getitem%20copy.js:87:10)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "b04414a0-80b5-46fe-a9d4-6f3c09147f2c",
+          "parentUUID": "15d3e231-a6f0-407b-8fe2-f254863332ac",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "b04414a0-80b5-46fe-a9d4-6f3c09147f2c"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 372,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

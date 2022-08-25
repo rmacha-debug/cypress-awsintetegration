@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-10T09:22:34.108Z",
+    "end": "2022-07-10T09:22:36.963Z",
+    "duration": 2855,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "20a3e09c-d6a3-4a27-8e52-b64d6fb214ea",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem copy.js",
+      "file": "cypress/integration/awstests/getitem copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7382654-6b6f-4d4d-a476-cf9642e1dee9",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 1901,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('scanForResultsDdbDc').then(jsondata => {\n  const obj = JSON.parse(jsondata);\n  expect(0).is.equals(0);\n  expect(0).is.equals(0);\n  cy.log(obj);\n  expect(\"Acme Band\").is.equals(obj.Items[0].Artist);\n  expect(\"Arturus Ardvarkian\").is.equals(obj.Items[1].Artist);\n  expect(\"http://demo.automationtesting.in/Register.html\").is.equals(obj.Items[2].Artist);\n  url = obj.Items[2].Artist;\n});",
+              "err": {},
+              "uuid": "ef1c1e15-f5f7-49a6-af56-395c89367560",
+              "parentUUID": "e7382654-6b6f-4d4d-a476-cf9642e1dee9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open a demo url",
+              "fullTitle": "Get Item from DB open a demo url",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(url);",
+              "err": {},
+              "uuid": "d56664c3-6547-416d-93bf-08fe77da3926",
+              "parentUUID": "e7382654-6b6f-4d4d-a476-cf9642e1dee9",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef1c1e15-f5f7-49a6-af56-395c89367560"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "d56664c3-6547-416d-93bf-08fe77da3926"
+          ],
+          "duration": 1901,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

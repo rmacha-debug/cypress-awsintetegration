@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T09:17:40.982Z",
+    "end": "2022-07-10T09:17:42.184Z",
+    "duration": 1202,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4532f1b7-64dd-4e8a-afb5-fe2da4d91206",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem copy.js",
+      "file": "cypress/integration/awstests/getitem copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ff38ff25-2567-4327-95df-b6da4f30c20d",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 615,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('scanForResultsDdbDc').then(jsondata => {\n  const obj = JSON.parse(jsondata);\n  expect(0).is.equals(0);\n  expect(0).is.equals(0);\n  cy.log(obj);\n  expect(\"Acme Band\").is.equals(obj.Items[0].Artist);\n  expect(\"Arturus Ardvarkian\").is.equals(obj.Items[1].Artist);\n  expect(\"http://demo.automationtesting.in/Register.html\").is.equals(obj.Items[2].Artist);\n  url = obj.Items[2].Artist;\n});",
+              "err": {},
+              "uuid": "225b5181-3941-45ba-8444-208cc46c7ad5",
+              "parentUUID": "ff38ff25-2567-4327-95df-b6da4f30c20d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "open a demo url",
+              "fullTitle": "Get Item from DB open a demo url",
+              "timedOut": null,
+              "duration": 520,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(url);",
+              "err": {
+                "message": "Error: Syntax error, unrecognized expression: http://demo.automationtesting.in/Register.html",
+                "estack": "Error: Syntax error, unrecognized expression: http://demo.automationtesting.in/Register.html\n    at Sizzle.error (http://localhost:56591/__cypress/runner/cypress_runner.js:93625:8)\n    at Sizzle.tokenize (http://localhost:56591/__cypress/runner/cypress_runner.js:94277:11)\n    at Sizzle.select (http://localhost:56591/__cypress/runner/cypress_runner.js:94704:20)\n    at Function.Sizzle [as find] (http://localhost:56591/__cypress/runner/cypress_runner.js:92929:9)\n    at jQuery.fn.init.find (http://localhost:56591/__cypress/runner/cypress_runner.js:94960:11)\n    at new jQuery.fn.init (http://localhost:56591/__cypress/runner/cypress_runner.js:95075:40)\n    at Object.query (http://localhost:56591/__cypress/runner/cypress_runner.js:163744:10)\n    at $Cy.$$ (http://localhost:56591/__cypress/runner/cypress_runner.js:152476:17)\n    at getElements (http://localhost:56591/__cypress/runner/cypress_runner.js:140926:20)\n    at tryCatcher (http://localhost:56591/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise.attempt.Promise.try (http://localhost:56591/__cypress/runner/cypress_runner.js:8072:29)\n    at resolveElements (http://localhost:56591/__cypress/runner/cypress_runner.js:140976:27)\n    at Context.get (http://localhost:56591/__cypress/runner/cypress_runner.js:140987:14)\n    at http://localhost:56591/__cypress/runner/cypress_runner.js:152716:15\n    at tryCatcher (http://localhost:56591/__cypress/runner/cypress_runner.js:10798:23)",
+                "diff": null
+              },
+              "uuid": "d438e4ed-3219-4ea1-a411-0655914871eb",
+              "parentUUID": "ff38ff25-2567-4327-95df-b6da4f30c20d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "225b5181-3941-45ba-8444-208cc46c7ad5"
+          ],
+          "failures": [
+            "d438e4ed-3219-4ea1-a411-0655914871eb"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1135,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

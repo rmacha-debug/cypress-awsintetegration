@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-07-16T12:37:33.453Z",
+    "end": "2021-07-16T12:37:34.088Z",
+    "duration": 635,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54898cbc-a6e5-4c65-870f-761b41ac0fee",
+      "title": "",
+      "fullFile": "cypress/integration/smoketests/test_Save.spec copy.js",
+      "file": "cypress/integration/smoketests/test_Save.spec copy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "786a1384-697b-4f16-a4ad-9373bc9f4c3d",
+          "title": "PDF docs Test-urlpdf1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Opening the PDF doc",
+              "fullTitle": "PDF docs Test-urlpdf1 Opening the PDF doc",
+              "timedOut": null,
+              "duration": 511,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ArchiveServerHostname = tdata.AC;\nconst Repo = tdata.REPO;\nconst Docid = tdata.DOCID;\nvar username = \"test\";\nvar title = \"test\"; //var url = \"http://10.96.94.174:8080/WebViewer/start?xml=%3C?xml%20version=%221.0%22%20encoding=%22iso-8859-1%22?%3E%3CdocAccess%20xmlns=%22http://opentext.net/viewer/webviewer/docAccess%22%20xmlns:xsi=%22http://www.w3.org/2001/XMLSchema-instance%22%3E%3Cdoc%20url=%22http://\"+ArchiveServerHostname+\"/archive?get%26amp;pVersion%3d0045%26amp;contRep%3d\"+Repo+\"%26amp;docId%3d\"+Docid+\"%26amp;%22%20displayName=%22Incoming%20invoice%20-%2000.00.0000%22/%3E%3Cuser%20clientUser=%22Z2%22%20organization=%22%22/%3E%3Crights%20annoRead=%22true%22%20annoWrite=%22true%22%20annoHide=%22true%22%20watermarkPrintHide=%22false%22%20watermarkDisplayHide=%22true%22%20noteRead=%22true%22%20noteWrite=%22true%22%20docSave=%22true%22%20rawSave=%22true%22%20docPrint=%22true%22/%3E%3Cviewer%20logInDate=%222010-05-06%22%20showHeader=%22true%22%20showThumb=%22true%22%20showNotes=%22false%22%20locale=%22en_US%22/%3E%3C/docAccess%3E\"\nvar url = \"http://10.96.94.174:8080/WebViewer/start?xml=%3C?xml%20version=%221.0%22%20encoding=%22iso-8859-1%22?%3E%3CdocAccess%20xmlns=%22http://opentext.net/viewer/webviewer/docAccess%22%20xmlns:xsi=%22http://www.w3.org/2001/XMLSchema-instance%22%3E%3Cdoc%20url=%22http://\" + ArchiveServerHostname + \"/archive?get%26amp;pVersion%3d0045%26amp;contRep%3d\" + Repo + \"%26amp;docId%3d\" + Docid + \"%26amp;%22%20displayName=%22Incoming\" + title + \"%20invoice%20-%2000.00.0000%22/%3E%3Cuser%20clientUser=%22\" + username + \"%22%20organization=%22%22/%3E%3Crights%20annoRead=%22true%22%20annoWrite=%22true%22%20annoHide=%22true%22%20watermarkPrintHide=%22false%22%20watermarkDisplayHide=%22true%22%20noteRead=%22true%22%20noteWrite=%22true%22%20docSave=%22true%22%20rawSave=%22true%22%20docPrint=%22true%22/%3E%3Cviewer%20logInDate=%222010-05-06%22%20showHeader=%22true%22%20showThumb=%22true%22%20showNotes=%22false%22%20locale=%22en_US%22/%3E%3C/docAccess%3E\";\nCypress.on('uncaught:exception', (err, runnable) => {\n  // returning false here prevents Cypress from\n  // failing the test\n  return false;\n});\nCypress.on(\"fail\", (error, runnable) => {\n  debugger; // we now have access to the err instance\n  // and the mocha runnable this failed on\n  throw error; // throw error to have test still fail\n});\ncy.visit(url);\ncy.get('#setFitToPageEnabled_2').should('be.visible');\nvar url = cy.hash();\nconsole.log(url.substring(url.indexOf(\"=\")));\ncy.request('POST', 'http://10.96.94.174:8080/WebViewer/faces/UI/component/toolbar/toolbar_ctrl.jsp?docHash=${Dochash}'); // in a real test you probably need to do some kind of assertion here",
+              "err": {
+                "message": "TypeError: url.indexOf is not a function",
+                "estack": "TypeError: url.indexOf is not a function\n    at Context.eval (http://localhost:61640/__cypress/tests?p=cypress\\integration\\smoketests\\test_Save.spec%20copy.js:136:37)",
+                "diff": null
+              },
+              "uuid": "5cf4b94a-830b-444a-b1b2-cb6e886ef64e",
+              "parentUUID": "786a1384-697b-4f16-a4ad-9373bc9f4c3d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5cf4b94a-830b-444a-b1b2-cb6e886ef64e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 511,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

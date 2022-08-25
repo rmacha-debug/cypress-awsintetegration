@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-10T10:05:32.827Z",
+    "end": "2022-07-10T10:05:32.887Z",
+    "duration": 60,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52c98919-5cb0-4197-99db-f710a323c173",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/login.js",
+      "file": "cypress/integration/awstests/login.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bcf46c05-9fa0-4db7-b639-7a6939b43ad1",
+          "title": "Login into aws",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login test",
+              "fullTitle": "Login into aws Login test",
+              "timedOut": null,
+              "duration": 43,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('connectaws').then(result => {\n  console.log(\"Access key:\", result.config.credentials.accessKeyId);\n  expect(result.config.credentials.accessKeyId).is.equal(\"AKIATMHI6IKSJ5J2KXHF\");\n});",
+              "err": {},
+              "uuid": "932bb1c4-d1e9-4f0c-aa63-107540bf2cb1",
+              "parentUUID": "bcf46c05-9fa0-4db7-b639-7a6939b43ad1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "932bb1c4-d1e9-4f0c-aa63-107540bf2cb1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

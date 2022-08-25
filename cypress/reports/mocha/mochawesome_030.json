@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T04:34:29.053Z",
+    "end": "2022-07-10T04:34:29.369Z",
+    "duration": 316,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17e30df0-0fbf-4489-b685-dea702407ca0",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem.js",
+      "file": "cypress/integration/awstests/getitem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f37af1a-a51d-497d-9988-9420207181e1",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 257,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var AWS = __webpack_require__(/*! aws-sdk */ \"./node_modules/aws-sdk/lib/browser.js\");\nvar fs = __webpack_require__(/*! fs */ \"../Users/rmacha/AppData/Local/Cypress/Cache/7.2.0/Cypress/resources/app/packages/server/node_modules/@cypress/webpack-batteries-included-preprocessor/empty.js\");\nAWS.config.loadFromPath(\"C:\\\\wev-automation\\\\cypress\\\\fixtures\\\\awscredentials.json\");\nAWS.config.getCredentials(function (err) {\n  if (err) console.log(err.stack); // credentials not loaded\n  else {\n      console.log(\"Access key:\", AWS.config.credentials.accessKeyId);\n      var DynamoDB = new AWS.DynamoDB();\n      var docClient = new AWS.DynamoDB.DocumentClient();\n      console.log(\"Importing Cars into DynamoDB. Please wait.\");\n      var params = {\n        Key: {\n          \"Artist\": {\n            S: \"No One You Know\"\n          },\n          \"SongTitle\": {\n            S: \"Call Me Today\"\n          }\n        },\n        TableName: \"Music\"\n      };\n      DynamoDB.getItem(params, function (err, data) {\n        if (err) console.log(err, err.stack); // an error occurred\n        else console.log(data); // successful response\n        /*\n        data = {\n         Item: {\n          \"AlbumTitle\": {\n            S: \"Songs About Life\"\n           }, \n          \"Artist\": {\n            S: \"Acme Band\"\n           }, \n          \"SongTitle\": {\n            S: \"Happy Day\"\n           }\n         }\n        }\n        */\n      });\n    }\n});",
+              "err": {
+                "message": "TypeError: AWS.FileSystemCredentials is not a constructor",
+                "estack": "TypeError: AWS.FileSystemCredentials is not a constructor\n    at Config.loadFromPath (http://localhost:64470/__cypress/tests?p=cypress\\integration\\awstests\\getitem.js:12694:27)\n    at Context.eval (http://localhost:64470/__cypress/tests?p=cypress\\integration\\awstests\\getitem.js:5510:16)",
+                "diff": null
+              },
+              "uuid": "c133e767-7e28-4c8c-96cd-6d1e5e70622e",
+              "parentUUID": "7f37af1a-a51d-497d-9988-9420207181e1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c133e767-7e28-4c8c-96cd-6d1e5e70622e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 257,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

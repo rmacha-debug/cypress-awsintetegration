@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T04:24:14.267Z",
+    "end": "2022-07-10T04:24:14.621Z",
+    "duration": 354,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3f014b25-4b4a-4029-8eaf-c640c6d3bfb9",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem.js",
+      "file": "cypress/integration/awstests/getitem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9a7771de-923e-4ce9-987f-830ab9dc6693",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 313,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('connectdynamodb').then(result => {\n  cy.log(result);\n});",
+              "err": {
+                "message": "CypressError: `cy.task('connectdynamodb')` failed with the following error:\n\n> Converting circular structure to JSON\n    --> starting at object with constructor 'Request'\n    |     property 'response' -> object with constructor 'Response'\n    --- property 'request' closes the circle\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('connectdynamodb')` failed with the following error:\n\n> Converting circular structure to JSON\n    --> starting at object with constructor 'Request'\n    |     property 'response' -> object with constructor 'Response'\n    --- property 'request' closes the circle\n\nhttps://on.cypress.io/api/task\n    at http://localhost:64112/__cypress/runner/cypress_runner.js:140444:19\n    at tryCatcher (http://localhost:64112/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64112/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (http://localhost:64112/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (http://localhost:64112/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (http://localhost:64112/__cypress/runner/cypress_runner.js:8904:18)\n    at _drainQueueStep (http://localhost:64112/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (http://localhost:64112/__cypress/runner/cypress_runner.js:5491:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64112/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (http://localhost:64112/__cypress/runner/cypress_runner.js:5377:14)\n\nFrom Node.js Internals:\n  TypeError: Converting circular structure to JSON\n      --> starting at object with constructor 'Request'\n      |     property 'response' -> object with constructor 'Response'\n      --- property 'request' closes the circle\n      at stringify (<anonymous>)\n      at writeChannelMessage (internal/child_process/serialization.js:117:20)\n      at process.target._send (internal/child_process.js:805:17)\n      at process.target.send (internal/child_process.js:703:19)\n      at Object.send (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\util.js:32:25)\n      at C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\util.js:54:18\n      at tryCatcher (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n      at Promise._settlePromiseFromHandler (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:547:31)\n      at Promise._settlePromise (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:604:18)\n      at Promise._settlePromise0 (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:649:10)\n      at Promise._settlePromises (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:729:18)\n      at _drainQueueStep (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:93:12)\n      at _drainQueue (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:86:9)\n      at Async._drainQueues (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:102:5)\n      at Immediate.Async.drainQueues [as _onImmediate] (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\async.js:15:14)\n      at processImmediate (internal/timers.js:461:21)",
+                "diff": null
+              },
+              "uuid": "f792a5d3-d106-40f1-a824-f019c68f78e9",
+              "parentUUID": "9a7771de-923e-4ce9-987f-830ab9dc6693",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f792a5d3-d106-40f1-a824-f019c68f78e9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 313,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

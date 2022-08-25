@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T10:42:36.953Z",
+    "end": "2022-07-10T10:42:37.766Z",
+    "duration": 813,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8fd9d500-d86d-4e6b-92d5-02d1e4780c00",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/specificitems.js",
+      "file": "cypress/integration/awstests/specificitems.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9ddadb6b-8a13-4aef-9715-400cded93934",
+          "title": "scanspecicdata",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "scanspecicdata",
+              "fullTitle": "scanspecicdata scanspecicdata",
+              "timedOut": null,
+              "duration": 761,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('scanspecicdata').then(jsondata => {\n  var obj = JSON.parse(jsondata);\n  for (var i = 0; i < obj.Count; i++) {\n    url = obj.Items[i].Awards;\n    cy.log(url);\n    cy.wait(6000);\n  }\n});",
+              "err": {
+                "message": "CypressError: `cy.task('scanspecicdata')` failed with the following error:\n\n> One or more parameter values were invalid: Condition parameter type does not match schema type\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('scanspecicdata')` failed with the following error:\n\n> One or more parameter values were invalid: Condition parameter type does not match schema type\n\nhttps://on.cypress.io/api/task\n    at http://localhost:59505/__cypress/runner/cypress_runner.js:142397:19\n    at tryCatcher (http://localhost:59505/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59505/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (http://localhost:59505/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (http://localhost:59505/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (http://localhost:59505/__cypress/runner/cypress_runner.js:8911:18)\n    at _drainQueueStep (http://localhost:59505/__cypress/runner/cypress_runner.js:5505:12)\n    at _drainQueue (http://localhost:59505/__cypress/runner/cypress_runner.js:5498:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:59505/__cypress/runner/cypress_runner.js:5514:5)\n    at Async.drainQueues (http://localhost:59505/__cypress/runner/cypress_runner.js:5384:14)\n\nFrom Node.js Internals:\n  ValidationException: One or more parameter values were invalid: Condition parameter type does not match schema type\n      at Request.extractError (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\protocol\\json.js:52:27)\n      at Request.callListeners (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\sequential_executor.js:106:20)\n      at Request.emit (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\sequential_executor.js:78:10)\n      at Request.emit (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:686:14)\n      at Request.transition (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:22:10)\n      at AcceptorStateMachine.runTo (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\state_machine.js:14:12)\n      at C:\\wev-automation\\node_modules\\aws-sdk\\lib\\state_machine.js:26:10\n      at Request.<anonymous> (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:38:9)\n      at Request.<anonymous> (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:688:12)\n      at Request.callListeners (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\sequential_executor.js:116:18)\n      at Request.emit (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\sequential_executor.js:78:10)\n      at Request.emit (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:686:14)\n      at Request.transition (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:22:10)\n      at AcceptorStateMachine.runTo (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\state_machine.js:14:12)\n      at C:\\wev-automation\\node_modules\\aws-sdk\\lib\\state_machine.js:26:10\n      at Request.<anonymous> (C:\\wev-automation\\node_modules\\aws-sdk\\lib\\request.js:38:9)",
+                "diff": null
+              },
+              "uuid": "7887a568-2cd8-43dd-aee6-d5e990c77883",
+              "parentUUID": "9ddadb6b-8a13-4aef-9715-400cded93934",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7887a568-2cd8-43dd-aee6-d5e990c77883"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 761,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

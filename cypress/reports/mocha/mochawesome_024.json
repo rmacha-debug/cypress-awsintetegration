@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-07-10T04:23:19.479Z",
+    "end": "2022-07-10T04:23:19.781Z",
+    "duration": 302,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e520105f-47a4-4d4e-8b51-7e78c04ea79e",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem.js",
+      "file": "cypress/integration/awstests/getitem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7402139-e04a-4b8d-8fff-9f07a6138f5b",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 281,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('connectdynamodb').then(result => {\n  cy.log(result);\n});",
+              "err": {
+                "message": "CypressError: `cy.task('connectdynamodb')` failed with the following error:\n\n> DynamoDB is not defined\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('connectdynamodb')` failed with the following error:\n\n> DynamoDB is not defined\n\nhttps://on.cypress.io/api/task\n    at http://localhost:63962/__cypress/runner/cypress_runner.js:140444:19\n    at tryCatcher (http://localhost:63962/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (http://localhost:63962/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (http://localhost:63962/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (http://localhost:63962/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (http://localhost:63962/__cypress/runner/cypress_runner.js:8904:18)\n    at _drainQueueStep (http://localhost:63962/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (http://localhost:63962/__cypress/runner/cypress_runner.js:5491:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:63962/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (http://localhost:63962/__cypress/runner/cypress_runner.js:5377:14)\n\nFrom Node.js Internals:\n  ReferenceError: DynamoDB is not defined\n      at connectdynamodb (C:\\wev-automation\\cypress\\plugins\\index.js:45:7)\n      at invoke (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\child\\task.js:47:14)\n      at C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\util.js:45:14\n      at tryCatcher (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n      at Function.Promise.attempt.Promise.try (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\method.js:39:29)\n      at Object.wrapChildPromise (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\util.js:44:23)\n      at Object.wrap (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\child\\task.js:53:8)\n      at execute (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\child\\run_plugins.js:127:19)\n      at EventEmitter.<anonymous> (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\child\\run_plugins.js:202:5)\n      at EventEmitter.emit (events.js:315:20)\n      at EventEmitter.emit (domain.js:486:12)\n      at process.<anonymous> (C:\\Users\\rmacha\\AppData\\Local\\Cypress\\Cache\\7.2.0\\Cypress\\resources\\app\\packages\\server\\lib\\plugins\\util.js:19:22)\n      at process.emit (events.js:315:20)\n      at process.EventEmitter.emit (domain.js:486:12)\n      at emit (internal/child_process.js:903:12)\n      at processTicksAndRejections (internal/process/task_queues.js:81:21)",
+                "diff": null
+              },
+              "uuid": "05fa0ab2-f189-44d9-b5c9-9a65b6ee8aff",
+              "parentUUID": "d7402139-e04a-4b8d-8fff-9f07a6138f5b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "05fa0ab2-f189-44d9-b5c9-9a65b6ee8aff"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 281,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

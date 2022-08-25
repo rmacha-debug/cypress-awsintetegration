@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-07-10T04:55:47.394Z",
+    "end": "2022-07-10T04:55:47.454Z",
+    "duration": 60,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24deb74c-cb43-4810-99d5-a3fe6d5029ba",
+      "title": "",
+      "fullFile": "cypress/integration/awstests/getitem.js",
+      "file": "cypress/integration/awstests/getitem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5973fddf-6720-40fd-be1d-1810dec29975",
+          "title": "Get Item from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Item from DB",
+              "fullTitle": "Get Item from DB Get Item from DB",
+              "timedOut": null,
+              "duration": 44,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// AWS.config.loadFromPath(\"C:\\\\wev-automation\\\\cypress\\\\fixtures\\\\awscredentials.json\")\nAWS.config.update({\n  region: 'us-east-1',\n  accessKeyId: 'AKIATMHI6IKSJ5J2KXHF',\n  secretAccessKey: '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',\n  endpoint: 'http://dynamodb.us-east-1.amazonaws.com'\n});\nAWS.config.getCredentials(function (err) {\n  if (err) console.log(err.stack); // credentials not loaded\n  else {\n      console.log(\"Access key:\", AWS.config.credentials.accessKeyId);\n      var DynamoDB = new AWS.DynamoDB();\n      var docClient = new AWS.DynamoDB.DocumentClient();\n      console.log(\"Importing Cars into DynamoDB. Please wait.\");\n      var params = {\n        Key: {\n          \"Artist\": {\n            S: \"No One You Know\"\n          },\n          \"SongTitle\": {\n            S: \"Call Me Today\"\n          }\n        },\n        TableName: \"Music\"\n      };\n      DynamoDB.getItem(params, function (err, data) {\n        if (err) cy.log(err, err.stack); // an error occurred\n        else cy.log(data); // successful response\n        /*\n        data = {\n         Item: {\n          \"AlbumTitle\": {\n            S: \"Songs About Life\"\n           }, \n          \"Artist\": {\n            S: \"Acme Band\"\n           }, \n          \"SongTitle\": {\n            S: \"Happy Day\"\n           }\n         }\n        }\n        */\n      });\n    }\n});",
+              "err": {},
+              "uuid": "b31c7bc8-2c81-4434-8a03-53f1aa8cbd1e",
+              "parentUUID": "5973fddf-6720-40fd-be1d-1810dec29975",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b31c7bc8-2c81-4434-8a03-53f1aa8cbd1e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 44,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
