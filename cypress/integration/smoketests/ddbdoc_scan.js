@@ -2,7 +2,7 @@ var AWS = require("aws-sdk");
 var fs = require("fs");
 async function scanForResultsDdbDc(){
   //AWS.config.loadFromPath("C:\\wev-automation\\cypress\\fixtures\\awscredentials.json")
-  AWS.config.update({region: 'us-east-1', accessKeyId: 'AKIATMHI6IKSJ5J2KXHF', secretAccessKey: "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", endpoint:"http://dynamodb.us-east-1.amazonaws.com"})
+  AWS.config.update({region: '', accessKeyId: '', secretAccessKey: "", endpoint:""})
   var client = new AWS.DynamoDB.DocumentClient();
  // var params = {
    // TableName: "Music"
@@ -26,7 +26,7 @@ async function scanForResultsDdbDc(){
 
 
 async function scanspecicdata(){
-  //AWS.config.update({region: 'us-east-1', accessKeyId: 'AKIATMHI6IKSJ5J2KXHF', secretAccessKey: "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", endpoint:"http://dynamodb.us-east-1.amazonaws.com"})
+  //AWS.config.update({region: '', accessKeyId: '', secretAccessKey: "", endpoint:""})
   AWS.config.loadFromPath("C:\\wev-automation\\cypress\\fixtures\\awscredentials.json")
   var client = new AWS.DynamoDB.DocumentClient();
   var params = {
